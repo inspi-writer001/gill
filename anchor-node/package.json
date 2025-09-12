@@ -1,0 +1,28 @@
+{
+  "name": "anchor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:tsx": "pnpm tsx ./src/imports.ts",
+    "start:node": "node ./src/imports.js",
+    "start:tsc": "tsc ./src/imports.ts --outFile ./src/imports-tsc.js && node ./src/imports-tsc.js",
+    "style:check": "prettier --check '{*,**/*}.{ts,tsx,js,jsx,css,json,md,mdx}'",
+    "style:fix": "pnpm style:check --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/borsh": "^0.31.1",
+    "@solana/kit": "^2.1.1",
+    "camelcase": "^6.3.0",
+    "dotenv": "^16.4.5",
+    "fastestsmallesttextencoderdecoder": "^1.0.22",
+    "gill": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
